@@ -5,15 +5,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_fragment"
-            android:icon="@drawable/ic_one"
-            android:title="First" />
+            android:icon="@drawable/icon_morning"
+            android:title="Shiny Mornings" />
         <item
             android:id="@+id/nav_second_fragment"
-            android:icon="@drawable/ic_two"
-            android:title="Second" />
+            android:icon="@drawable/icon_afternoon"
+            android:title="Lazy Afternoons" />
         <item
             android:id="@+id/nav_third_fragment"
-            android:icon="@drawable/ic_three"
-            android:title="Third" />
+            android:icon="@drawable/icon_evening"
+            android:title="Pleasant Evenings" />
+        <item
+            android:id="@+id/nav_fourth_fragment"
+            android:title="Crazy Nights!"
+            android:icon="@drawable/icon_party"/>
+        <item
+            android:id="@+id/nav_fifth_fragment"
+            android:title="Time for bed"
+            android:icon="@drawable/icon_night"/>
     </group>
 </menu>

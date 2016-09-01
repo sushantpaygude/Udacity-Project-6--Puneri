@@ -13,9 +13,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sushant.udacityproject6_puneri.fragments.FifthFragment;
 import com.example.sushant.udacityproject6_puneri.fragments.FirstFragment;
+import com.example.sushant.udacityproject6_puneri.fragments.FourthFragment;
 import com.example.sushant.udacityproject6_puneri.fragments.SecondFragment;
 import com.example.sushant.udacityproject6_puneri.fragments.ThirdFragment;
 
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout mDrawer;
     ActionBarDrawerToggle drawerToggle;
     View navigationHeader;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerToggle=setupDrawerToggle();
         navigationHeader=navigationViewDrawer.inflateHeaderView(R.layout.navigation_header);
+        setTitle("Puneri");
 
     }
 
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Fragment fragment=null;
         Class fragmentClass=null;
+
         switch (item.getItemId())
         {
                 case R.id.nav_first_fragment:
@@ -86,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.nav_third_fragment:
                     fragmentClass= ThirdFragment.class;
                     break;
+            case R.id.nav_fourth_fragment:
+                fragmentClass= FourthFragment.class;
+                break;
+            case R.id.nav_fifth_fragment:
+                fragmentClass= FifthFragment.class;
+                break;
             default:
                 fragmentClass = FirstFragment.class;
 
