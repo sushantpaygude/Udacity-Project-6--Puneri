@@ -1,5 +1,6 @@
 package com.example.sushant.udacityproject6_puneri;
 
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle=setupDrawerToggle();
         navigationHeader=navigationViewDrawer.inflateHeaderView(R.layout.navigation_header);
         setTitle("Puneri");
-
     }
 
     @Override
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
 
     @Override
@@ -78,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void selectDrawerItem(MenuItem item)
     {
+        mDrawer.closeDrawers();
         Fragment fragment=null;
         Class fragmentClass=null;
 
@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         {
                 case R.id.nav_first_fragment:
                     fragmentClass= FirstFragment.class;
-                   // navigationHeader.se
                     break;
                 case R.id.nav_second_fragment:
                     fragmentClass= SecondFragment.class;
@@ -101,27 +100,30 @@ public class MainActivity extends AppCompatActivity {
                 break;
             default:
                 fragmentClass = FirstFragment.class;
-
         }
 
 
         try {
                 fragment=(Fragment)fragmentClass.newInstance();
-
         }
+
         catch (Exception e)
         {
             e.printStackTrace();
         }
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fLContent,fragment).commit();
-
+        final Fragment finalFragment = fragment;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.fLContent, finalFragment).commit();
+            }
+        },0);
         item.setChecked(true);
         setTitle(item.getTitle());
-        mDrawer.closeDrawers();
-
     }
+
     private ActionBarDrawerToggle setupDrawerToggle() {
         return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_open,  R.string.drawer_close);
     }

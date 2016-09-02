@@ -6,6 +6,4 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:gravity="bottom"
     android:background="@drawable/image_flag">
-
-
 </LinearLayout>

@@ -25,7 +25,6 @@ public class SecondFragment extends Fragment implements AdapterView.OnItemClickL
     String[] titles={"Dagdushet Temple","Rajiv Gandhi Zoo","Hotel Durvankur","Agakhan Palace","Pataleshwar Cave Temple","Osho Ashram","George Restaurant","Raja Kelkar Museum"};
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // return super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.card_list_view,container,false);
     }
 
@@ -33,18 +32,15 @@ public class SecondFragment extends Fragment implements AdapterView.OnItemClickL
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         listView = (ListView)getView().findViewById(R.id.card_listView);
-        // listView.addHeaderView(new View(this));
-
         cardAdapter=new CustomCardAdapter(getActivity().getApplicationContext(),R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
+
         for(int i=0;i<images.length;i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }
 
         listView.setOnItemClickListener(this);
-
-
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

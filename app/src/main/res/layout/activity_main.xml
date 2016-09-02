@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fLContent">
-
         </FrameLayout>
 
     </LinearLayout>
@@ -30,10 +29,7 @@
         android:id="@+id/nvView"
         android:layout_gravity="start"
         app:menu="@menu/drawer_view"
-        android:background="@android:color/white"
-       >
-
+        android:background="@android:color/white">
     </android.support.design.widget.NavigationView>
-
 
 </android.support.v4.widget.DrawerLayout>

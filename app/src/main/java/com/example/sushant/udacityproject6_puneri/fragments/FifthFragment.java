@@ -25,9 +25,7 @@ public class FifthFragment extends Fragment implements AdapterView.OnItemClickLi
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //   super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.card_list_view, container, false);
-
     }
 
     @Override
@@ -35,19 +33,18 @@ public class FifthFragment extends Fragment implements AdapterView.OnItemClickLi
         super.onViewCreated(view, savedInstanceState);
 
         listView = (ListView) getView().findViewById(R.id.card_listView);
-        // listView.addHeaderView(new View(this));
-
         cardAdapter = new CustomCardAdapter(getActivity().getApplicationContext(), R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
+
         for (int i = 0; i < images.length; i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }
         listView.setOnItemClickListener(this);
     }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String selectedTitle=((TextView)view.findViewById(R.id.card_title)).getText().toString();
-        Log.e("ID","IS:"+selectedTitle);
     }
 }
