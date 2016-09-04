@@ -17,10 +17,28 @@
 
         <FrameLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_maharaj1"
+                android:scaleType="fitXY"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/puneri"
+                android:textSize="100sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:id="@+id/text_title"
+                />
+
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fLContent">
         </FrameLayout>
-
+        </FrameLayout>
     </LinearLayout>
     
     <android.support.design.widget.NavigationView
@@ -29,7 +47,7 @@
         android:id="@+id/nvView"
         android:layout_gravity="start"
         app:menu="@menu/drawer_view"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        app:itemTextColor="@color/colorPrimary">
     </android.support.design.widget.NavigationView>
-
 </android.support.v4.widget.DrawerLayout>

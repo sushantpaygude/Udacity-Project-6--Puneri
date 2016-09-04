@@ -1,5 +1,6 @@
 package com.example.sushant.udacityproject6_puneri;
 
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle=setupDrawerToggle();
         navigationHeader=navigationViewDrawer.inflateHeaderView(R.layout.navigation_header);
         setTitle("Puneri");
+
+        TextView title_text=(TextView)findViewById(R.id.text_title);
+        Typeface typeface=Typeface.createFromAsset(getAssets(),"fonts/samarkannormal.ttf");
+        title_text.setTypeface(typeface);
     }
 
     @Override
