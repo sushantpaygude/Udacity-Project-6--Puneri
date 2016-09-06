@@ -21,8 +21,7 @@ public class FifthFragment extends Fragment implements AdapterView.OnItemClickLi
     private CustomCardAdapter cardAdapter;
     ListView listView;
     static Integer[] images = {R.drawable.image_westin,R.drawable.image_ohotel,R.drawable.image_novotel,R.drawable.image_jwmarriot,R.drawable.image_lemeridien,R.drawable.image_hyatt,R.drawable.image_corinthians,R.drawable.image_sunandsand};
-    String[] titles = {"The Westin", "O Hotel", "Novotel", "JW Marriot", "Le Meridien", "Hyatt Regency", "Corinthians Resort & Spa", "Sun & Sand"};
-
+    static Integer[] titles={R.string.westin,R.string.ohotel,R.string.novotel,R.string.marriot,R.string.lemeridien,R.string.hyatt,R.string.corinthians,R.string.sun};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.card_list_view, container, false);
@@ -36,7 +35,7 @@ public class FifthFragment extends Fragment implements AdapterView.OnItemClickLi
         cardAdapter = new CustomCardAdapter(getActivity().getApplicationContext(), R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
 
-        for (int i = 0; i < images.length; i++) {
+        for (int i = 0; i < titles.length; i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }

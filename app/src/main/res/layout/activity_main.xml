@@ -30,8 +30,7 @@
                 android:textSize="100sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_gravity="center"
-                android:id="@+id/text_title"
-                />
+                android:id="@+id/text_title"/>
 
         <FrameLayout
             android:layout_width="match_parent"

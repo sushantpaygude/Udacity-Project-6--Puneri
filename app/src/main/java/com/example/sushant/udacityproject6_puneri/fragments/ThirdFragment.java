@@ -24,7 +24,7 @@ public class ThirdFragment extends Fragment implements AdapterView.OnItemClickLi
     private CustomCardAdapter cardAdapter;
     ListView listView;
     static Integer[] images={R.drawable.image_shaniwarwada,R.drawable.image_okayama,R.drawable.image_marzorin,R.drawable.image_sarasbaug,R.drawable.image_khadakwasla,R.drawable.image_german,R.drawable.image_kayani,R.drawable.image_garden};
-    String[] titles={"Shaniwar Wada","Okayama Garden","Marz-o-rin","Sarasbaug","Khadakwasla","German Bakery","Kayani Bakery","Garden Vadapav"};
+    static Integer[] titles={R.string.shaniwar,R.string.okayama,R.string.marz,R.string.saras,R.string.khadakwasla,R.string.german,R.string.kayani,R.string.garden};
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.card_list_view,container,false);
@@ -38,7 +38,7 @@ public class ThirdFragment extends Fragment implements AdapterView.OnItemClickLi
         cardAdapter=new CustomCardAdapter(getActivity().getApplicationContext(),R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
 
-        for(int i=0;i<images.length;i++) {
+        for(int i=0;i<titles.length;i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }

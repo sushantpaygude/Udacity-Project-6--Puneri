@@ -21,8 +21,7 @@ public class FourthFragment extends Fragment implements AdapterView.OnItemClickL
     private CustomCardAdapter cardAdapter;
     ListView listView;
     static Integer[] images = {R.drawable.image_penthouse,R.drawable.image_stonewater,R.drawable.image_miamiclub,R.drawable.image_fbeach,R.drawable.image_atmosphere,R.drawable.image_area51,R.drawable.image_hardrock,R.drawable.image_flambos};
-    String[] titles = {"Penthouse", "Stone Water Grill", "Mi-a-Mi", "F Beach House", "Atmoshphere 6", "Area 51", "Hard Rock Cafe", "Flambos Brewpub"};
-
+    static Integer[] titles={R.string.penthouse,R.string.stone,R.string.miami,R.string.fbeach,R.string.atmosphere,R.string.area,R.string.hardrock,R.string.flambos};
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.card_list_view, container, false);
@@ -34,7 +33,7 @@ public class FourthFragment extends Fragment implements AdapterView.OnItemClickL
         listView = (ListView) getView().findViewById(R.id.card_listView);
         cardAdapter = new CustomCardAdapter(getActivity().getApplicationContext(), R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
-        for (int i = 0; i < images.length; i++) {
+        for (int i = 0; i < titles.length; i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }

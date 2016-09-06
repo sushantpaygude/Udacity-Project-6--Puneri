@@ -22,7 +22,7 @@ public class SecondFragment extends Fragment implements AdapterView.OnItemClickL
     private CustomCardAdapter cardAdapter;
     ListView listView;
     static Integer[] images={R.drawable.image_dagduseth,R.drawable.image_rajivpark,R.drawable.image_durvankur,R.drawable.image_agakhan,R.drawable.image_pataleshwar,R.drawable.image_osho,R.drawable.image_george,R.drawable.image_kelkar};
-    String[] titles={"Dagdushet Temple","Rajiv Gandhi Zoo","Hotel Durvankur","Agakhan Palace","Pataleshwar Cave Temple","Osho Ashram","George Restaurant","Raja Kelkar Museum"};
+    static Integer[] titles={R.string.dagdushet,R.string.rajiv,R.string.durvankur,R.string.agakhan,R.string.pataleshwar,R.string.osho,R.string.george,R.string.raja};
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.card_list_view,container,false);
@@ -35,7 +35,7 @@ public class SecondFragment extends Fragment implements AdapterView.OnItemClickL
         cardAdapter=new CustomCardAdapter(getActivity().getApplicationContext(),R.layout.list_item_card);
         listView.setAdapter(cardAdapter);
 
-        for(int i=0;i<images.length;i++) {
+        for(int i=0;i<titles.length;i++) {
             RowItem item = new RowItem(images[i], titles[i]);
             cardAdapter.add(item);
         }

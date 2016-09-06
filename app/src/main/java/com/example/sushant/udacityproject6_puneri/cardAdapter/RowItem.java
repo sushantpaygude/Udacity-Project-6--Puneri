@@ -8,9 +8,9 @@ import android.widget.TextView;
  */
 public class RowItem {
     private int cardImage;
-    private String cardTitle;
+    private int cardTitle;
 
-    public RowItem(int cardImage, String cardTitle) {
+    public RowItem(int cardImage, int cardTitle) {
         this.cardImage = cardImage;
         this.cardTitle = cardTitle;
     }
@@ -19,15 +19,11 @@ public class RowItem {
         return cardImage;
     }
 
-    public String getcardTitle() {
+    public int getcardTitle() {
         return cardTitle;
     }
 
-    public void setcardImage(int cardImage) {
-        this.cardImage = cardImage;
-    }
-
-    public void setString(String cardTitle) {
+    public void setString(int cardTitle) {
         this.cardTitle = cardTitle;
     }
 }

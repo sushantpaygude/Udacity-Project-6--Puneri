@@ -67,8 +67,8 @@ public class CustomCardAdapter extends ArrayAdapter<RowItem> {
             viewHolder = (CardViewHolder) row.getTag();
         }
             RowItem rowItem=getItem(position);
-            viewHolder.cardTitle.setText(rowItem.getcardTitle());
-            String selected=rowItem.getcardTitle();
+            viewHolder.cardTitle.setText(getContext().getString(rowItem.getcardTitle()));
+
 
         Picasso.with(getContext()).load(rowItem.getcardImage()).into(viewHolder.cardImage);
             return row;

@@ -6,5 +6,46 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="puneri">Puneri</string>
+    <string name="sinhgad">Sinhgad Fort</string>
+    <string name="cafegoodluck">Cafe GoodLuck</string>
+    <string name="parvati">Parvati Hill</string>
+    <string name="wadeshwar">Wadeshwar</string>
+    <string name="taljai">Taljai Hill</string>
+    <string name="vaishali">Hotel Vaishali</string>
+    <string name="vohuman">Vohuman Cafe</string>
+    <string name="chai">Chai</string>
+    <string name="dagdushet">Dagdushet Temple</string>
+    <string name="rajiv">Rajiv Gandhi Zoo</string>
+    <string name="durvankur">Hotel Durvankur</string>
+    <string name="agakhan">Agakhan Palace</string>
+    <string name="pataleshwar">Pataleshwar Cave Temple</string>
+    <string name="osho">Osho Ashram</string>
+    <string name="george">George Restaurant</string>
+    <string name="raja">Raja Kelkar Museum</string>
+    <string name="shaniwar">Shaniwar Wada</string>
+    <string name="okayama">Okayama Garden</string>
+    <string name="marz">Marz-o-rin</string>
+    <string name="saras">Sarasbaug</string>
+    <string name="khadakwasla">Khadakwasla</string>
+    <string name="german">German Bakery</string>
+    <string name="kayani">Kayani Bakery</string>
+    <string name="garden">Garden Vadapav</string>
+    <string name="penthouse">Penthouse</string>
+    <string name="stone">Stone Water Grill</string>
+    <string name="miami">Mi-a-Mi</string>
+    <string name="fbeach">F Beach House</string>
+    <string name="atmosphere">Atmoshphere 6</string>
+    <string name="area">Area 51</string>
+    <string name="hardrock">Hard Rock Cafe</string>
+    <string name="flambos">Flambos Brewpub</string>
+    <string name="westin">The Westin</string>
+    <string name="ohotel">O Hotel</string>
+    <string name="novotel">Novotel</string>
+    <string name="marriot">JW Marriot</string>
+    <string name="lemeridien">Le Meridien</string>
+    <string name="hyatt">Hyatt Regency</string>
+    <string name="corinthians">Corinthians Resort and Spa</string>
+    <string name="sun">Sun and Sand</string>
+
 
 </resources>
